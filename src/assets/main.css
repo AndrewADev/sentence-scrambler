@@ -29,7 +29,13 @@ a,
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 20% 30% 30% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas:
+      'header header header header'
+      '. main main .'
+      'footer footer footer footer';
     padding: 0 2rem;
+    height: 100vh;
   }
 }

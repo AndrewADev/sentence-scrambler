@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <h2>Home</h2>
+
+  <p>See the <a href="/worksheet">worksheet page</a></p>
 </template>

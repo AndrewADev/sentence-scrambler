@@ -1,29 +1,41 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <LandingIntro msg="Sentence Scrambler" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/worksheet">Worksheet</RouterLink>
       </nav>
     </div>
   </header>
 
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
+  <footer></footer>
 </template>
+
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router';
+import LandingIntro from './components/LandingIntro.vue';
+</script>
 
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  grid-column-start: 2;
+  /* grid-column-start: 4; */
+}
+
+footer {
+  grid-area: footer;
 }
 
 .logo {
