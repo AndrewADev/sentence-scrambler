@@ -23,6 +23,21 @@ jobs:
       - name: Run tests
         run: yarn run test:coverage
 
+  lint:
+    name: 'Check for lint issues'
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - uses: bahmutov/npm-install@v1.8.29
+
+      - name: build app
+        run: yarn run lint:ci
+
   build:
     name: 'Verify the build'
     runs-on: ubuntu-latest
