@@ -8,5 +8,8 @@
     ":automergeRequireAllStatusChecks",
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)"
-  ]  
+  ],
+  "js": {
+    "rangeStrategy": "bump"
+  }
 }
