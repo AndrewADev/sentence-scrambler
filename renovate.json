@@ -9,6 +9,15 @@
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)"
   ],
+  "packageRules": [
+    {
+      "groupName": "Test packages (non-preset)",
+      "matchPackagePrefixes": ["@vitest", "@playwright"],
+      "matchPackageNames": ["jsdom", "vitest"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ],
   "js": {
     "rangeStrategy": "bump"
   }
