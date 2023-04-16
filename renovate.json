@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":automergeLinters",
+    ":automergeTesters",
+    ":automergeTypes",
+    ":automergeRequireAllStatusChecks",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "packageRules": [
+    {
+      "groupName": "Test packages (non-preset)",
+      "matchPackagePrefixes": ["@vitest", "@playwright"],
+      "matchPackageNames": ["jsdom", "vitest"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ],
+  "js": {
+    "rangeStrategy": "bump"
+  }
+}
