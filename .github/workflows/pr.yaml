@@ -38,7 +38,7 @@ jobs:
 
       - uses: bahmutov/npm-install@v1.8.32
 
-      - name: build app
+      - name: Run lint
         run: npm run lint:ci
 
   style:
@@ -53,7 +53,7 @@ jobs:
 
       - uses: bahmutov/npm-install@v1.8.32
 
-      - name: build app
+      - name: Run formatter
         run: npm run format:ci
 
   build:
@@ -70,3 +70,21 @@ jobs:
 
       - name: build app
         run: npm run build
+
+  e2e:
+    name: 'Verify the e2e tests'
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - uses: bahmutov/npm-install@v1.8.32
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: build app
+        run: npm run test:e2e
