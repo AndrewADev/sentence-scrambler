@@ -3,5 +3,5 @@ export const joinSentences = (sentences: string[][] = []) => {
   return sentences.map((sent) => sent?.join(', ')).join('\n');
 };
 
-export const splitInputToSentences = (rawText?: string) => rawText?.split(/\n/).map((sent) => sent.split(',')) ?? [];
-
+export const splitInputToSentences = (rawText?: string) =>
+  rawText?.split(/\n/).map((sent) => sent.split(',')) ?? [];

@@ -32,7 +32,8 @@ const parsedInput = computed(() => {
   return editableSentences.value.split(/\n/).map((sent) => sent.split(','));
 });
 
-const splitInputToSentences = (rawText: string) => rawText.split(/\n/).map((sent) => sent.split(','));
+const splitInputToSentences = (rawText: string) =>
+  rawText.split(/\n/).map((sent) => sent.split(','));
 
 watch(
   () => parsedInput,
@@ -42,7 +43,7 @@ watch(
 );
 
 const onChange = (e: any) => {
-  emit("update:sentences", splitInputToSentences(e.target.value))
+  emit('update:sentences', splitInputToSentences(e.target.value));
 };
 </script>
 

@@ -37,10 +37,9 @@ describe('joinSentences', () => {
   });
 });
 
-
-describe("splitInputToSentences", () => {
-  it("handles invalid data", () => {
+describe('splitInputToSentences', () => {
+  it('handles invalid data', () => {
     const split = splitInputToSentences(undefined);
-    expect(split).toEqual([])
-  })
-})
+    expect(split).toEqual([]);
+  });
+});
