@@ -12,8 +12,8 @@
   "packageRules": [
     {
       "groupName": "Test packages (non-preset)",
-      "matchPackagePrefixes": ["@vitest", "@playwright"],
-      "matchPackageNames": ["jsdom", "vitest"],
+      "matchPackagePrefixes": ["@playwright"],
+      "matchPackageNames": ["jsdom"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     },
