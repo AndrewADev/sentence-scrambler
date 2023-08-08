@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - uses: bahmutov/npm-install@v1.8.33
+      - uses: bahmutov/npm-install@v1.8.34
 
       - name: Run tests
         run: npm run test:coverage
@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - uses: bahmutov/npm-install@v1.8.33
+      - uses: bahmutov/npm-install@v1.8.34
 
       - name: Run lint
         run: npm run lint:ci
@@ -51,7 +51,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - uses: bahmutov/npm-install@v1.8.33
+      - uses: bahmutov/npm-install@v1.8.34
 
       - name: Run formatter
         run: npm run format:ci
@@ -66,7 +66,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - uses: bahmutov/npm-install@v1.8.33
+      - uses: bahmutov/npm-install@v1.8.34
 
       - name: build app
         run: npm run build
@@ -81,7 +81,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - uses: bahmutov/npm-install@v1.8.33
+      - uses: bahmutov/npm-install@v1.8.34
 
       - name: build app
         run: npm run build
