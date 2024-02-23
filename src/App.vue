@@ -2,11 +2,6 @@
   <header>
     <div class="wrapper">
       <LandingIntro msg="Sentence Scrambler" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/worksheet">Worksheet</RouterLink>
-      </nav>
     </div>
   </header>
 
@@ -17,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
 import LandingIntro from './components/LandingIntro.vue';
 </script>
 
