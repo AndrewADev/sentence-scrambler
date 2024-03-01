@@ -50,5 +50,9 @@ const onChange = (e: any) => {
 <style scoped>
 .entry {
   width: 95%;
+
+  @media (prefers-color-scheme: dark) {
+    background: var(--vt-c-black);
+  }
 }
 </style>

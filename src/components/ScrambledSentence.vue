@@ -21,13 +21,17 @@ const props = defineProps<{
 const scrambled = simpleScramble(props.parts);
 </script>
 
-<style>
-.sentence-row {
-}
-
+<style scoped lang="postcss">
 .answer-block {
   @apply border-b border-solid border-black;
+
   height: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .answer-block {
+    @apply border-white;
+  }
 }
 
 .display-inline {
