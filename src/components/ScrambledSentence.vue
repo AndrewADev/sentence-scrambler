@@ -22,6 +22,8 @@ const scrambled = simpleScramble(props.parts);
 </script>
 
 <style scoped lang="postcss">
+@import 'tailwindcss' reference;
+
 .answer-block {
   @apply border-b border-solid border-black;
 

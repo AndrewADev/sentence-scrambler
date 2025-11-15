@@ -42,8 +42,8 @@ watch(
   },
 );
 
-const onChange = (e: any) => {
-  emit('update:sentences', splitInputToSentences(e.target.value));
+const onChange = (e: Event) => {
+  emit('update:sentences', splitInputToSentences((e.target as HTMLTextAreaElement).value));
 };
 </script>
 
