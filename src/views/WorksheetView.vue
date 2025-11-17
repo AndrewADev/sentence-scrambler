@@ -28,6 +28,8 @@ const inputSentences = ref(sentences);
 </script>
 
 <style scoped>
+@import 'tailwindcss' reference;
+
 .border-div {
   @apply border border-solid p-2 mt-4;
 }
